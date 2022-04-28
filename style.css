@@ -1,0 +1,471 @@
+/* Universal styles */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: var(--text-font);
+}
+
+:root {
+  --logo-font: 'Cinzel', serif;
+  --text-font: 'Bai Jamjuree', sans-serif;
+  --bold: 900;
+  --bold-text: 700;
+  --main-color: #48D1CC;
+  --shade: #3FB7B3;
+  --grey: #EFEFEF;
+}
+
+button {
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+/* These are blue botton hover states */
+.whoWeAreCard button:hover,
+.heroCTA button:hover {
+  background-color: var(--shade);
+}
+
+body {
+  margin: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.bold {
+  font-weight: var(--bold-text);
+}
+
+/* Main content */
+
+/* Logo */
+
+.logo {
+  font-family: var(--logo-font);
+  width: fit-content;
+  padding-bottom: .5rem;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo p~p {
+  margin-top: .5rem;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.logo p:first-of-type {
+  /* top of logo */
+  color: var(--main-color);
+  font-weight: var(--bold);
+  border-bottom: 2px solid var(--shade);
+  margin: 0;
+  margin-top: 2rem;
+  padding-bottom: .5rem;
+  font-size: 1.8rem;
+}
+
+/* end logo */
+/* Nav links */
+
+nav {
+  background-color: var(--main-color);
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  margin-bottom: 0;
+}
+
+nav li {
+  padding: 1.1rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li:hover {
+  background-color: var(--shade);
+}
+
+/* End nav */
+/* Hero */
+
+.hero {
+  background-image: url(https://images.unsplash.com/photo-1611073615848-d6ff6215931f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+  background-repeat: no-repeat;
+  height: 650px;
+  background-size: cover;
+}
+
+.heroCTA {
+  background-color: white;
+  width: 25rem;
+  position: relative;
+  top: 7rem;
+  left: 45rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.heroCTA h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.heroCTA p {
+  font-size: .9rem;
+  margin: 1.5rem 0;
+}
+
+.heroCTA button {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  width: 10rem;
+  padding: 1rem;
+  font-size: .8rem;
+}
+
+/* Blue button hover states are in universal styles */
+
+.heroCTA button:active {
+  background-color: var(--main-color);
+}
+
+/* End of Hero */
+
+/* Banner One */
+
+.bannerOne {
+  text-align: center;
+  background-color: var(--grey);
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bannerOne h2 {
+  color: var(--main-color);
+  margin-bottom: 2.5rem;
+}
+
+.bannerOneLayout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bannerOneLayout div {
+  width: 20rem;
+  height: 10rem;
+}
+
+.bannerOneLayout a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+}
+
+.bannerOneLayout a:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.bannerOne-imgOne,
+.bannerOne-imgTwo,
+.bannerOne-imgThree {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+
+.bannerOne-imgOne:hover,
+.bannerOne-imgTwo:hover,
+.bannerOne-imgThree:hover {
+  transform: scale(1.1);
+}
+
+.bannerOne-imgOne p,
+.bannerOne-imgTwo p,
+.bannerOne-imgThree p {
+  font-weight: var(--bold-text);
+  background-color: rgba(255, 255, 255, .5);
+  width: 90%;
+  padding: 1rem;
+}
+
+.bannerOne-imgOne {
+  background-image: url(https://images.unsplash.com/photo-1539815208687-a0f05e15d601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+
+}
+
+.bannerOne-imgTwo {
+  background-image: url(https://images.unsplash.com/photo-1645005512845-e6a21492ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.bannerOne-imgThree {
+  background-image: url(https://images.unsplash.com/photo-1530210124550-912dc1381cb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+/* end of banner one */
+
+/* Stay connected ... Sign Up*/
+
+.signUp {
+  width: 85%;
+  margin: 2rem auto;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.signUp div:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+.signUp p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.signUp input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 4px;
+
+}
+
+.signUp input:first-of-type {
+  margin-right: 1rem;
+}
+
+.signUp input::placeholder {
+  font-family: var(--text-font);
+  font-size: .8rem;
+}
+
+.signUp button {
+  height: 1.9rem;
+  width: 4rem;
+  position: relative;
+  top: 1px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: .8rem;
+}
+
+/* Who we are section */
+.layoutTwo {
+  width: 85%;
+  height: 30rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.layoutTwoImage {
+  background-image: url(https://images.unsplash.com/photo-1573496130141-209d200cebd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: 60% 40%;
+  width: 50%;
+}
+
+.layoutTwoBlank {
+  width: 50%;
+  background-color: var(--grey);
+}
+
+.whoWeAreCard {
+  width: 30rem;
+  height: 24rem;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  position: absolute;
+  top: 82rem;
+  left: 33rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.whoWeAreCard p {
+  margin: 0;
+  text-align: left;
+}
+
+.whoWeAreCard button {
+  margin-top: 1rem;
+  background-color: var(--main-color);
+  color: white;
+  width: 50%;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: none;
+}
+
+/* Blue button hover states are in universal styles */
+/* Testimonials */
+
+.testimonials {
+  margin: 2rem auto;
+  width: 85%;
+}
+
+.testimonialsLayout {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.testimonialsLayout img {
+  width: 8rem;
+  height: 10rem;
+  clip-path: circle();
+  object-fit: cover;
+}
+
+.testimonialsLayout div {
+  background-color: var(--grey);
+  width: 50%;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.testimonialsLayout div:first-of-type {
+  margin-right: 1rem;
+}
+
+.testimonialsLayout div:nth-of-type(2) {
+  height: 20rem;
+}
+
+.testimonialsLayout div p::before {
+  content: url(https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/000000/external-inverted-quotation-mark-used-to-highlight-dialogues-text-regular-tal-revivo.png);
+  margin-right: 10px;
+}
+
+.testimonialsLayout div p::after {
+  content: url(https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/000000/external-closing-inverted-quotation-bracket-mark-used-to-highlight-dialogues-text-regular-tal-revivo.png);
+  margin-left: 10px;
+}
+
+.testimonialsLayout div span {
+  font-style: italic;
+}
+
+/* From the blog section */
+
+.fromTheBlog {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin: 0 auto 1.5rem;
+  column-gap: 1rem;
+}
+
+.fromTheBlog-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.fromTheBlog-card:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.fromTheBlogImageBg {
+  height: 200px;
+  width: 100%;
+}
+
+.fromTheBlogBottom {
+  background-color: var(--grey);
+}
+
+.blogText {
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  margin: -80px auto 20px;
+  width: 80%;
+  font-size: .9rem;
+  height: 320px;
+}
+
+.blogText h3 {
+  font-size: 1.1rem;
+}
+
+.fromTheBlogImageBg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Footer */
+
+footer {
+  background-color: #242424;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: 0;
+  color: #474747;
+}
